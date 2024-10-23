@@ -20,7 +20,6 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list)
     else
-      puts @movies.inspect
       render :new, status: :unprocessable_entity
     end
   end
