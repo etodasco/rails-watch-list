@@ -60,11 +60,3 @@ end
 
 gem 'rspec-rails', group: [ :test ]
 gem 'rails-controller-testing', group: [ :test ]
-
-group :development, :test do
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg' # PostgreSQL is used in Heroku
-end
