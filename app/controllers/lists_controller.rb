@@ -6,9 +6,8 @@ class ListsController < ApplicationController
   end
 
   def show
-    @movies = @list.movies
     @bookmark = Bookmark.new
-    # @review = Review.new(list: @list)
+    @review = Review.new(list: @list)
   end
 
   def new
@@ -33,7 +32,6 @@ class ListsController < ApplicationController
 
   def set_list
     @list = List.find(params[:id])
-    @movies = @list.movies
   end
 
   def list_params
